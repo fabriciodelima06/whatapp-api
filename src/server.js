@@ -12,9 +12,9 @@ app.register(require('@fastify/cors'), {
 let clientSession = {}
 
 app.post('/status', async (request, reply) => {
-    reply.header("Access-Control-Allow-Origin", "*");
 
     const { sessionName } = request.body
+    
     if (!clientSession[sessionName])
         clientSession[sessionName] = new Client(sessionName)
 

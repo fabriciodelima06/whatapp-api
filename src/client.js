@@ -1,4 +1,4 @@
-import parsePhoneNumber, { isValidPhoneNumber } from "libphonenumber-js"
+// import parsePhoneNumber, { isValidPhoneNumber } from "libphonenumber-js"
 import { create, SocketState } from "venom-bot"
 
 class Client {
@@ -32,7 +32,7 @@ class Client {
 
             this.statusSession = statusSession
             this.connected = ['isLogged', 'qrReadSuccess', 'chatsAvailable', 'successChat'].includes(statusSession)
-      
+
         }
 
         const start = client => {
@@ -48,12 +48,16 @@ class Client {
     }
 
     async sendText(to, body) {
-        if (!isValidPhoneNumber(to, 'BR')) {
-            throw new Error('This number is not valid!')
-        }
 
-        let phoneNumber = parsePhoneNumber(to, 'BR')?.format('E.164')?.replace('+', '')
-        phoneNumber = `${to}@c.us`
+        // if (!isValidPhoneNumber(to, 'BR')) {
+        //     console.log({ to })
+        //     throw new Error('This number is not valid!')
+        // }
+
+        
+        // let phoneNumber = parsePhoneNumber(to, 'BR')?.format('E.164')?.replace('+', '')
+        const phoneNumber = `${to}@c.us`        
+        
         await this.client.sendText(phoneNumber, body)
     }
 
