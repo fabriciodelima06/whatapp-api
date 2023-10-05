@@ -44,7 +44,8 @@ class Client {
 
         create(sessionName, qr, status, { 
             logQR: false, 
-            browserPathExecutable: '/opt/render/project/.render/chrome/opt/google/chrome', 
+            puppeteerOptions: { args: ['--no-sandbox'] }, 
+            browserPathExecutable: '/opt/render/project/.render/chrome/opt/google/chrome',
         })
             .then(client => start(client))
             .catch(error => console.log(error))
