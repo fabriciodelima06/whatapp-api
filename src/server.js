@@ -11,6 +11,10 @@ app.register(require('@fastify/cors'), {
 
 let clientSession = {}
 
+app.get('/teste', (reply) => {
+    reply.send('Hello')
+})
+
 app.post('/status', async (request, reply) => {
 
     const { sessionName } = request.body
