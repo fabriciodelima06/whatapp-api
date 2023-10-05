@@ -11,7 +11,7 @@ app.register(require('@fastify/cors'), {
 
 let clientSession = {}
 
-app.get('/teste', (reply) => {
+app.get('/teste', (request, reply) => {
     reply.status(200).send('Hello')
 })
 
