@@ -45,6 +45,7 @@ class Client {
         create(sessionName, qr, status, { 
             logQR: false, 
             puppeteerOptions: { args: ['--no-sandbox'] }, 
+            headless: false,
             browserPathExecutable: '/opt/render/project/.render/chrome/opt/google/chrome',
         })
             .then(client => start(client))
