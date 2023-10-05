@@ -46,7 +46,9 @@ class Client {
             logQR: false, 
             puppeteerOptions: { args: ['--no-sandbox'] }, 
             headless: false,
-            browserPathExecutable: '/opt/render/project/.render/chrome/opt/google/chrome',
+            browserPathExecutable: '/usr/bin/chromium-browser',
+            // browserPathExecutable: '/opt/render/project/.render/chrome/opt/google/chrome',
+            slowMo: undefined,
         })
             .then(client => start(client))
             .catch(error => console.log(error))
