@@ -42,7 +42,7 @@ class Client {
             })
         }
 
-        create(sessionName, qr, status, { logQR: false })
+        create(sessionName, qr, status, { logQR: false, puppeteerOptions: { args: ['--no-sandbox'] }, })
             .then(client => start(client))
             .catch(error => console.log(error))
     }
@@ -54,10 +54,10 @@ class Client {
         //     throw new Error('This number is not valid!')
         // }
 
-        
+
         // let phoneNumber = parsePhoneNumber(to, 'BR')?.format('E.164')?.replace('+', '')
-        const phoneNumber = `${to}@c.us`        
-        
+        const phoneNumber = `${to}@c.us`
+
         await this.client.sendText(phoneNumber, body)
     }
 
