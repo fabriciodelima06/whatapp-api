@@ -1,0 +1,4 @@
+2023/10/05-01:15:33.605 27ec Log #3: 3 ops saved to Table #4 OK
+2023/10/05-01:15:34.612 27ec Archiving C:\Projetos\ws-fabricio\whatapp-api\tokens\sessionName\Default\File System\Origins/000003.log: IO error: C:\Projetos\ws-fabricio\whatapp-api\tokens\sessionName\Default\File System\Origins/000003.log: Could not rename file: File currently in use. (ChromeMethodBFE: 14::RenameFile::2)
+2023/10/05-01:15:34.613 27ec Table #4: 3 entries OK
+2023/10/05-01:15:35.628 27ec Archiving C:\Projetos\ws-fabricio\whatapp-api\tokens\sessionName\Default\File System\Origins/MANIFEST-000001: IO error: C:\Projetos\ws-fabricio\whatapp-api\tokens\sessionName\Default\File System\Origins/MANIFEST-000001: Could not rename file: File currently in use. (ChromeMethodBFE: 14::RenameFile::2)
