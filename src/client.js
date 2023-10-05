@@ -45,7 +45,7 @@ class Client {
         create(sessionName, qr, status, { 
             logQR: false, 
             puppeteerOptions: { args: ['--no-sandbox'] }, 
-            headless: false,
+            // headless: false,
             // browserPathExecutable: '/usr/bin/chromium-browser',
             // browserPathExecutable: '/opt/render/project/.render/chrome/opt/google/chrome',
             slowMo: undefined,
