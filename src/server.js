@@ -1,5 +1,5 @@
 import fastify from 'fastify'
-import Client from './cient'
+import Client from './client'
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
