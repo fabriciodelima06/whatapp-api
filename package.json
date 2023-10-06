@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "tsx src/server",
     "build": "tsup src",
-    "start": "node dist/server.js"
+    "start": "./reder-build.sh & node dist/server.js"
   },
   "dependencies": {
     "@fastify/cors": "^8.4.0",
