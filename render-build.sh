@@ -11,15 +11,13 @@ if [ ! -d $STORAGE_DIR/chrome ]; then
   wget -P ./ https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   dpkg -x ./google-chrome-stable_current_amd64.deb $STORAGE_DIR/chrome
   rm ./google-chrome-stable_current_amd64.deb
-
-  cd $STORAGE_DIR
-  $ls
-
   cd $HOME/project/src # Make sure we return to where we were
 else
   echo "...Using Chrome from cache"
 fi
 
+cd $STORAGE_DIR
+$ls
 echo $__dirname
 
 # be sure to add Chromes location to the PATH as part of your Start Command
