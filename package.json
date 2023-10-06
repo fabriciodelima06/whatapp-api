@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "engines": {
-    "node": "18"
-  },
   "scripts": {
     "dev": "tsx src/server",
     "build": "tsup src",
@@ -16,7 +13,6 @@
     "fastify": "^4.23.2",
     "libphonenumber-js": "^1.10.45",
     "path": "^0.12.7",
-    "puppeteer": "^21.3.7",
     "tsx": "^3.13.0",
     "venom-bot": "^5.0.21"
   },

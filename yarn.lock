@@ -2980,9 +2980,9 @@ npm-check-updates@^16.10.17:
     update-notifier "^6.0.2"
 
 npm-install-checks@^6.0.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/npm-install-checks/-/npm-install-checks-6.2.0.tgz#fae55b9967b03ac309695ec96629492d5cedf371"
-  integrity sha512-744wat5wAAHsxa4590mWO0tJ8PKxR8ORZsH9wGpQc3nWTzozMAgBN/XyqYw7mg3yqLM8dLwEnwSfKMmXAjF69g==
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/npm-install-checks/-/npm-install-checks-6.3.0.tgz#046552d8920e801fa9f919cad569545d60e826fe"
+  integrity sha512-W29RiK/xtpCGqn6f3ixfRYGk+zRyr+Ew9F2E20BfXxT5/euLdA/Nm7fO7OeTGuAmTs30cpgInyJ0cYe708YTZw==
   dependencies:
     semver "^7.1.1"
 
@@ -3543,7 +3543,7 @@ puppeteer-extra@^3.3.6:
     debug "^4.1.1"
     deepmerge "^4.2.2"
 
-puppeteer@^21.1.0, puppeteer@^21.3.7:
+puppeteer@^21.1.0:
   version "21.3.8"
   resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-21.3.8.tgz#986f95fef0a0f74381053fade8cb7a3595144fbf"
   integrity sha512-4OrInVIAtDgcznENUV4Du4gYSZhRmbCkckvOoPstXrUH4JsQ3atSegY+9f/tOKCDB2qh7sXaszDcFEn+RymY0g==
