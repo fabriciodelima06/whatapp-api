@@ -5,7 +5,7 @@ set -o errexit
 STORAGE_DIR=/opt/render/project/.render
 
 if [ ! -d $STORAGE_DIR/chrome ]; then
-    rm -fr $STORAGE_DIR/chrome
+    rm -fr $STORAGE_DIR
 fi
 
 if [ ! -d $STORAGE_DIR/chrome ]; then
@@ -13,16 +13,16 @@ if [ ! -d $STORAGE_DIR/chrome ]; then
   mkdir -p $STORAGE_DIR/chrome
   cd $STORAGE_DIR/chrome
   wget -P ./https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  dpkg -x ./google-chrome-stable_current_amd64.deb $STORAGE_DIR/chrome
+  dpkg -i ./google-chrome-stable_current_amd64.deb $STORAGE_DIR/chrome
   rm ./google-chrome-stable_current_amd64.deb
   cd $HOME/project/src # Make sure we return to where we were
 else
   echo "...Using Chrome from cache"
 fi
 
-echo -d $STORAGE_DIR/chrome/opt/google/chrome
+echo $HOME
 
 # be sure to add Chromes location to the PATH as part of your Start Command
-export PATH="${PATH}:/opt/render/project/.render/chrome/opt/google/chrome"
+# export PATH="${PATH}:/opt/render/project/.render/chrome/opt/google/chrome"
 
 # add your own build commands...
