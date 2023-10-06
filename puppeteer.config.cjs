@@ -1,7 +1,7 @@
-import { join } from 'path';
+// import { join } from 'path';
 
-const puppeteerConfig = {
-  cacheDirectory: join(__dirname, '.cache', 'puppeteer'),
-};
+// const puppeteerConfig = {
+//   cacheDirectory: join(__dirname, '.cache', 'puppeteer'),
+// };
 
-export default puppeteerConfig;
+// export default puppeteerConfig;
