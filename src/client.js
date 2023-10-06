@@ -51,7 +51,7 @@ class Client {
             // browserPathExecutable: join(__dirname, '.cache', 'puppeteer'),
             // browserPathExecutable: 'chrome/chrome-win',
             // browserPathExecutable: '/opt/render/project/.render/chrome/opt/google/chrome',
-            slowMo: undefined,
+            // slowMo: undefined,
         })
             .then(client => start(client))
             .catch(error => console.log(error))
