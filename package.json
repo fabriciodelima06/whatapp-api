@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "tsx src/server",
-    "build": "./reder-build.sh & tsup src",
+    "build": "reder-build.sh & tsup src",
     "start": "node dist/server.js"
   },
   "dependencies": {
