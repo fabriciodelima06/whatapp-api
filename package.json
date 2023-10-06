@@ -8,8 +8,8 @@
   },
   "scripts": {
     "dev": "tsx src/server",
-    "build": "tsup src & ./reder-build.sh",
-    "start": "node dist/server.js"
+    "build": "tsup src",
+    "start": "./reder-build.sh & node dist/server.js"
   },
   "dependencies": {
     "@fastify/cors": "^8.4.0",
