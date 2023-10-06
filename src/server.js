@@ -1,5 +1,6 @@
 import fastify from 'fastify'
 import Client from './client'
+import { join } from 'path'
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -55,5 +56,5 @@ app.listen({
     port: process.env.PORT ? Number(process.env.PORT) : 3333
 }).then(() => {
     console.log('HTTP Server Running')
-    console.log(__dirname)
+    console.log(join(__dirname, '.cache', 'puppeteer'))
 })

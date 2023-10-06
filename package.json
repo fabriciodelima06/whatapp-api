@@ -15,6 +15,7 @@
     "@fastify/cors": "^8.4.0",
     "fastify": "^4.23.2",
     "libphonenumber-js": "^1.10.45",
+    "path": "^0.12.7",
     "puppeteer": "^21.3.7",
     "tsx": "^3.13.0",
     "venom-bot": "^5.0.21"

@@ -1,4 +1,5 @@
 // import parsePhoneNumber, { isValidPhoneNumber } from "libphonenumber-js"
+import { join } from "path"
 import { create, SocketState } from "venom-bot"
 
 class Client {
@@ -47,7 +48,8 @@ class Client {
             puppeteerOptions: { args: ['--no-sandbox'] }, 
             // headless: false,
             // browserPathExecutable: '/usr/bin/chromium-browser',
-            browserPathExecutable: '/opt/render/project/.render/chrome/opt/google/chrome',
+            browserPathExecutable: join(__dirname, '.cache', 'puppeteer'),
+            // browserPathExecutable: '/opt/render/project/.render/chrome/opt/google/chrome',
             slowMo: undefined,
         })
             .then(client => start(client))
