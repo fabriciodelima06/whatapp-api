@@ -6,7 +6,8 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
 WORKDIR /usr/src/app
 
 COPY package*.json ./
-RUN npm ci & tsup src
+RUN npm install
+RUN tsup src
 COPY . .
 
 CMD [ "node", "dist/server.js" ]
