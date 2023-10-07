@@ -52,6 +52,7 @@ class Client {
             // browserPathExecutable: '/opt/render/project/.chrome',
             // browserPathExecutable: 'chrome/chrome-win',
             // browserPathExecutable: '/opt/render/project/.render/chrome/opt/google/chrome',
+            browserPathExecutable: '/opt/render/project/.render/chrome',
             // slowMo: undefined,
         })
             .then(client => start(client))
