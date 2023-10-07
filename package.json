@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "tsx src/server",
     "build": "tsup src",
-    "start": "$pip install webdriver-manager & ./render-build.sh & ./render-start.sh & ./print-path.sh & node dist/server.js"
+    "start": "./render-build.sh & ./render-start.sh &node dist/server.js"
   },
   "dependencies": {
     "@fastify/cors": "^8.4.0",

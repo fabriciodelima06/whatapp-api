@@ -20,7 +20,7 @@ fi
 
 echo ""
 echo "filename -------------"
-for filename in $(ls /opt/render/project/.render/chrome)
+for filename in $(ls /usr/bin/)
 do
   echo $filename
 done;
