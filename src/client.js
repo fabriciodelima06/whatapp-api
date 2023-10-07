@@ -45,12 +45,12 @@ class Client {
 
         create(sessionName, qr, status, { 
             logQR: false, 
-            puppeteerOptions: { args: ['--no-sandbox'] }, 
+            // puppeteerOptions: { args: ['--no-sandbox'] }, 
             // headless: false,
             // browserPathExecutable: '/usr/bin/chromium-browser',
             // browserPathExecutable: join(__dirname, '.cache', 'puppeteer'),
             // browserPathExecutable: 'chrome/chrome-win',
-            // browserPathExecutable: '/opt/render/project/.render/chrome/opt/google/chrome',
+            browserPathExecutable: '/opt/render/project/.render/chrome/opt/google/chrome',
             // slowMo: undefined,
         })
             .then(client => start(client))
