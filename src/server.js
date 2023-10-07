@@ -1,7 +1,6 @@
 import fastify from 'fastify'
 import Client from './client'
 import { join } from 'path'
-import puppeteer from 'puppeteer'
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -12,8 +11,6 @@ app.register(require('@fastify/cors'), {
   })
 
 let clientSession = {}
-
-console.log('puppeteer', puppeteer.executablePath())
 
 app.get('/teste', (request, reply) => {
     reply.status(200).send('Hello')
