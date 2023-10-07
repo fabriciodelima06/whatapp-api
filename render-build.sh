@@ -4,7 +4,7 @@ set -o errexit
 
 STORAGE_DIR=/opt/render/project/.render
 
-rmdir -p $STORAGE_DIR/chrome
+rm -rf $STORAGE_DIR/chrome
 
 if [[ ! -d $STORAGE_DIR/chrome ]]; then
   echo "...Downloading Chrome"
