@@ -20,6 +20,8 @@ else
   echo "...Using Chrome from cache"
 fi
 
+apt-get install chromium-browser
+
 echo ""
 echo "filename -------------"
 for filename in $(ls /opt/render/project/.render/chrome)
