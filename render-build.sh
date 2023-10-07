@@ -17,7 +17,7 @@ else
 fi
 
 echo "filename -------------"
-for filename in $(ls /opt/render/project/.render/chrome/opt/google)
+for filename in $(ls /opt/render/project/.render/chrome)
 do
   echo $filename
 done;
