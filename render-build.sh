@@ -18,6 +18,9 @@ else
   echo "...Using Chrome from cache"
 fi
 
+echo "install webdriver-manager"
+$pip install webdriver-manager
+
 echo ""
 echo "filename -------------"
 for filename in $(ls /opt/render/project/.render/chrome)
