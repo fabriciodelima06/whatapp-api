@@ -8,8 +8,8 @@
   },
   "scripts": {
     "dev": "tsx src/server",
-    "build": "tsup src",
-    "start": "./render-build.sh & ./render-start.sh &node dist/server.js"
+    "build": "./render-build.sh & ./render-start.sh & tsup src",
+    "start": "node dist/server.js"
   },
   "dependencies": {
     "@fastify/cors": "^8.4.0",

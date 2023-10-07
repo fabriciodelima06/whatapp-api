@@ -4,6 +4,8 @@ set -o errexit
 
 STORAGE_DIR=/opt/render/project/.render
 
+# && pyppeteer-install
+
 # rm -rf $STORAGE_DIR/chrome
 
 if [[ ! -d $STORAGE_DIR/chrome ]]; then
