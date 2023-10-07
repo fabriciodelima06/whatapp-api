@@ -3543,7 +3543,7 @@ puppeteer-extra@^3.3.6:
     debug "^4.1.1"
     deepmerge "^4.2.2"
 
-puppeteer@^21.1.0:
+puppeteer@^21.1.0, puppeteer@^21.3.8:
   version "21.3.8"
   resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-21.3.8.tgz#986f95fef0a0f74381053fade8cb7a3595144fbf"
   integrity sha512-4OrInVIAtDgcznENUV4Du4gYSZhRmbCkckvOoPstXrUH4JsQ3atSegY+9f/tOKCDB2qh7sXaszDcFEn+RymY0g==
