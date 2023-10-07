@@ -7,7 +7,6 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 RUN npm ci
-RUN tsup src
 COPY . .
 
 CMD [ "node", "dist/server.js" ]
