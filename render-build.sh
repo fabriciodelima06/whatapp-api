@@ -16,7 +16,7 @@ else
   echo "...Using Chrome from cache"
 fi
 
-for filename in $(ls /opt/render/project/.render/chrome/opt/google/chrome)
+for filename in $(ls /opt/render/project/.render)
 do
   echo $filename
 done;
