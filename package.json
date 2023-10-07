@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "tsx src/server",
     "build": "tsup src",
-    "start": "./render-build.sh & export PATH=${PATH}:/opt/render/project/.render/chrome/opt/google/chrome & node dist/server.js"
+    "start": "./render-build.sh & ./render-start.sh & print-path & node dist/server.js"
   },
   "dependencies": {
     "@fastify/cors": "^8.4.0",
