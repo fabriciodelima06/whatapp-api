@@ -1,39 +1,59 @@
-const express = require("express")
-const { scrapeLogic } = require("./scrapeLogic")
-const { create } = require("venom-bot")
-const { join } = require("path")
+import fastify from 'fastify'
+import Client from './client'
 
-const app = express()
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
-app.get("/", (req, res) => {
-    res.send('Render Puppeteer is up and running')
+const app = fastify()
+app.register(require('@fastify/cors'), {
+    origin: '*',
+    methods: 'GET,PUT,POST,DELETE,OPTIONS',
+  })
+
+let clientSession = {}
+
+app.get('/teste', (request, reply) => {
+    reply.status(200).send('Hello')
 })
 
-app.get('/scrape', (req, res) => {
-    scrapeLogic(res)
-})
-app.get('/status', (req, res) => {
+app.post('/status', async (request, reply) => {
 
-    console.log(__dirname)
+    const { sessionName } = request.body
+    
+    if (!clientSession[sessionName])
+        clientSession[sessionName] = new Client(sessionName)
 
-    create('sessionName', undefined, undefined, {
-        logQR: false,
-        puppeteerOptions: {
-            args: [
-                '--no-sandbox',
-                '--disable-stuid-sandbox',
-                '--single-process',
-                '--no-zygote'
-            ]
-        },
-        // browserPathExecutable: join(__dirname, '.cache', 'puppeteer'),
+    const client = clientSession[sessionName]
+
+    while (true) {
+        await sleep(1000)
+        if (client.qrCode || client.connected) break
+    }
+
+    reply.send({
+        qr_code: client.qrCode,
+        connected: client.isConnected,
+        status: client.status,
     })
-        .then(client => res.send(ok))
-        .catch(error => console.log(error))
+
 })
 
-const PORT = process.env.PORT || 4000
+app.post('/send', (request, reply) => {
 
-app.listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`)
+    const { sessionName, number, message } = request.body
+
+    clientSession[sessionName].sendText(number, message)
+        .then(() => {
+            return reply.send()
+        })
+        .catch(error => {
+            return reply.status(500).send({ status: 'error', message: error })
+        })
+})
+
+app.listen({
+    host: '0.0.0.0',
+    port: process.env.PORT ? Number(process.env.PORT) : 3333
+}).then(() => {
+    console.log('HTTP Server Running')
+    // console.log(join(__dirname, '../'))
 })
