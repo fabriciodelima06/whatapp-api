@@ -8,9 +8,15 @@ const app = fastify()
 app.register(require('@fastify/cors'), {
     origin: '*',
     methods: 'GET,PUT,POST,DELETE,OPTIONS',
-  })
+})
 
 let clientSession = {}
+
+const users = {
+    fabricio: '123',
+    fabio: '123',
+    wellington: '123',
+}
 
 app.get('/teste', (request, reply) => {
     reply.status(200).send('Hello')
@@ -19,7 +25,9 @@ app.get('/teste', (request, reply) => {
 app.post('/status', async (request, reply) => {
 
     const { sessionName } = request.body
-    
+
+    if(!users[sessionName]) reply.status(401).send('usuário invalido')
+
     if (!clientSession[sessionName])
         clientSession[sessionName] = new Client(sessionName)
 
@@ -39,8 +47,10 @@ app.post('/status', async (request, reply) => {
 })
 
 app.post('/send', (request, reply) => {
-
+    
     const { sessionName, number, message } = request.body
+
+    if(!users[sessionName]) reply.status(401).send('usuário invalido')
 
     clientSession[sessionName].sendText(number, message)
         .then(() => {
